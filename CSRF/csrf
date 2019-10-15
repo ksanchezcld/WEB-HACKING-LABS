@@ -1,0 +1,5 @@
+Cross-Site Request Forgery (CSRF) Attack Lab
+
+- https://resources.infosecinstitute.com/csrf-unauthorized-remote-admin-access/#gref
+- http://www.cis.syr.edu/~wedu/seed/Labs/Attacks_CSRF/CSRF.pdf
+- https://nvd.nist.gov/vuln/detail/CVE-2015-3224
